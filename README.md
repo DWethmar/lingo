@@ -15,13 +15,13 @@ protip: use a + in your email address to create a unique email address: its-a-me
 - run `./scripts/certs.sh` to generate certificates for the relay server
 - run `./scripts/proto.sh` to generate the protobuf files (this runs [buf](https://buf.build/) in docker)
   - Specified deps in the `buf.yaml` need to be covered in your `buf.lock` file. If you get an error, run `./scripts/proto-buf-mod-update.sh` to generate the `buf.lock` file.
-  - resulting generated files are in `./proto/gen`
+  - resulting generated files are in `./gen`
   - check changes with the [buf](https://buf.build/) linter: `./scripts/proto-lint.sh`
 - run `./scripts/env.sh` to generate the .env file
 
-# run
+# Run
 - after setup, run `docker-compose up`
-- check `gen/openapiv2/proto/relay/v1/relay_service.swagger.yaml`
+- check `gen/openapiv2/proto/relay/v1/relay_service.swagger.yaml` for the api documentation
 
 # danger zone below
 
